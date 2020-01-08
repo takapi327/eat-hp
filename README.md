@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|mail|string|unique:true, null:false|
+|password|string|null:false, null:false|
+|re_password|string|null:false, null:false|
