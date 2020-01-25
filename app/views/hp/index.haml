@@ -1,0 +1,17 @@
+.header
+  .header__box
+    .header__box__top
+      .header__box__top__logo
+      .form
+        -# = form_for [@post, url: { controller: :hp, action: :new }] do |f|
+        -#   .input-box
+        -#     = f.text_field :content, class: 'input-box__text', placeholder: '何かお探しですか？'
+        -#     = f.submit 'Search', class: 'input-search'
+
+    .header__box__bottom
+      .header__box__bottom__menu
+        .header__box__bottom__menu__item1
+        .header__box__bottom__menu__item2
+      .header__box__bottom__login
+        .header__box__bottom__login__item1
+        .header__box__bottom__login__item2

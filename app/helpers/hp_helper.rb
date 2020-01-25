@@ -1,0 +1,2 @@
+module HpHelper
+end
