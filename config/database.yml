@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: transamGN001
   socket: /tmp/mysql.sock
 
 development:
@@ -51,4 +51,5 @@ production:
   <<: *default
   database: eat-hp_production
   username: eat-hp
-  password: <%= ENV['EAT-HP_DATABASE_PASSWORD'] %>
+  password: transamGN001
+  socket: /var/lib/mysql/mysql.sock
