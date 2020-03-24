@@ -1,5 +1,7 @@
 class NoticesController < ApplicationController
   def index
+    @notices = Notice.order('created_at DESC')
+    @notice = Notice.where(important: 1).order('created_at DESC')
   end
 
   def new

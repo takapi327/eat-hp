@@ -1,2 +1,20 @@
-%p Hello, world!
+.language__count
+  - @notices.each do |notices|
+    .language__detail__box
+      .language__detail__box__day
+        = notices.tittle
+        = notices.content
+
+  - @notice.each do |notice|
+    .language__detail__box
+      .importants
+        - if notice.important == true
+          .important
+            重要なお知らせ
+        - else
+      .language__detail__box__day
+        = notice.tittle
+        = notice.content
+
 = link_to 'お知らせ', new_notice_path
+= link_to 'トップページ', root_path

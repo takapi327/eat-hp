@@ -41,5 +41,11 @@
         2F : 4~12席(1組限定)<br> ※全席禁煙(外に灰皿あり)
   .shop__detail
     お知らせ
+    .language__count
+      - @notices.each do |notices|
+        .language__detail__box
+          .language__detail__box__day
+            = notices.tittle
+            = notices.content
   .shop__detail
     採用情報
