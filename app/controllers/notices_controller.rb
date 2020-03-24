@@ -17,6 +17,10 @@ class NoticesController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @notice = Notice.find(params[:id])
+  end
   
   private
   def notice_params

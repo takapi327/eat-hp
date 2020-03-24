@@ -44,8 +44,9 @@
     .language__count
       - @notices.each do |notices|
         .language__detail__box
-          .language__detail__box__day
-            = notices.tittle
-            = notices.content
+          = link_to (notice_path(notices.id)) do
+            .language__detail__box__day
+              = notices.tittle
+              = notices.content
   .shop__detail
     採用情報

@@ -1,0 +1,11 @@
+.language__count
+  .language__detail__box
+    .importants
+      - if @notice.important == true
+        .important
+          重要なお知らせ
+      - else
+    .language__detail__box__day
+      = @notice.tittle
+      = @notice.content
+    = link_to 'トップページ', root_path
