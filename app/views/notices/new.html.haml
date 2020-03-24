@@ -1,0 +1,11 @@
+%p new
+.notice__page
+  = form_with(model: @notice, local: true) do |f|
+    %div.tittle
+      = f.text_field :tittle, class: 'tittle-field', required: "" , placeholder: 'タイトル(必須 40文字まで)'
+    .notice__content
+      = f.text_area :content, class: 'text_box', required: "" , placeholder: "マークダウン記法で入力できます"
+    .notice__check
+      = f.check_box :important, {class: "check_box"}, true, false
+    .notice__btn
+      = f.submit '投稿する', class: 'form-btn'

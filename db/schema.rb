@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_073309) do
+ActiveRecord::Schema.define(version: 2020_03_24_030702) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "menu_id", null: false
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2020_02_03_073309) do
     t.string "name", null: false
     t.integer "price", null: false
     t.text "content", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "tittle", null: false
+    t.text "content", null: false
+    t.boolean "important"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
