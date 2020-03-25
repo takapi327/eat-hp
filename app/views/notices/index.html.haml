@@ -1,20 +1,20 @@
-.language__count
+.notise
   - @notices.each do |notices|
-    .language__detail__box
+    .notice__detail
       = link_to (notice_path(notices.id)) do
-        .language__detail__box__day
+        .notice__text
           = notices.tittle
           = notices.content
 
   - @notice.each do |notice|
-    .language__detail__box
+    .notice__detail
       = link_to (notice_path(notice.id)) do
-        .importants
+        .notice__importants
           - if notice.important == true
-            .important
+            .notice__important
               重要なお知らせ
           - else
-        .language__detail__box__day
+        .notice__text
           = notice.tittle
           = notice.content
 

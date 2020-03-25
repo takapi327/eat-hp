@@ -1,11 +1,13 @@
-.language__count
-  .language__detail__box
-    .importants
+.notise
+  .notice__detail
+    .notice__importants
       - if @notice.important == true
-        .important
+        .notice__important
           重要なお知らせ
       - else
-    .language__detail__box__day
+    .notice__text
       = @notice.tittle
       = @notice.content
+    .notice__delete 
+      =link_to "この投稿を削除する", notice_path(@notice.id), method: :delete
     = link_to 'トップページ', root_path

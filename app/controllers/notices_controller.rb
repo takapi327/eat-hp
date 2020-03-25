@@ -21,6 +21,15 @@ class NoticesController < ApplicationController
   def show
     @notice = Notice.find(params[:id])
   end
+
+  def destroy
+    @notice = Notice.find(params[:id])
+    if @notice.destroy
+      redirect_to root_path
+    else
+      alert('削除できませんでした。')
+    end
+  end
   
   private
   def notice_params
