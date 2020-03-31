@@ -1,0 +1,87 @@
+.wrapper
+  .left
+    = link_to root_path do
+      .store-image
+    -# = image_tag(".jpg", class: ".store-image")
+    = link_to lunches_path do
+      .left__lunch
+        お昼はランチ
+    .left__list
+      %ul.left__list__menu
+        %li.left__list__menu__list
+          メニュー
+        %li.left__list__menu__list
+          お弁当
+        %li.left__list__menu__list
+          アクセス
+        %li.left__list__menu__list
+          お知らせ
+      .left__list__booking
+        予約をする
+      %ul.left__list__sns
+        %li.icon
+          = icon('fab', 'instagram')
+        %li.icon
+          = icon('fab', 'facebook-square')
+        %li.icon
+          = icon('fab', 'twitter-square')
+  .lunch
+    .lunch__menu
+      .lunch__menu__image
+      -# = image_tag(".jpg", class: ".store-image")
+      .lunch__menu__text
+        .lunch_text
+          メニュー
+        .lunch_content
+          あああああああああああ
+          %br 良い良い良い良い良い良いい
+    %ul.lunch__list
+      %li.lunch__list__btn
+        ご飯もの
+      %li.lunch__list__btn
+        麺もの
+      %li.lunch__list__btn
+        定食
+  .menu
+    .menu__list
+      .menu__list__image
+      .menu__list__text
+        親子丼
+    .menu__list
+      .menu__list__image1
+      .menu__list__text
+        親子丼
+    .menu__list
+      .menu__list__image
+      .menu__list__text
+        親子丼
+    .menu__list
+      .menu__list__image
+      .menu__list__text
+        親子丼
+
+  .access
+    .access__menu
+      .access__menu__image
+        .image
+      -# = image_tag(".jpg", class: ".store-image")
+      .access__menu__text
+        .access_text
+          アクセス
+        .access_content
+          あああああああああああ
+          %br 良い良い良い良い良い良いい
+
+
+  .left_footer
+    .bottom
+      %ul.list
+        %li.list__name
+          = link_to 'スタッフ', "#"
+        %li.list__name
+          = link_to '店舗のご案内', "#"
+        %li.list__name
+          = link_to 'お知らせ', "#"
+        %li.list__name
+          = link_to '求人情報', "#"
+      .store
