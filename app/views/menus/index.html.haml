@@ -1,52 +1,155 @@
 .wrapper
-  .shop__tittle
-    創作和食 いづみ屋
-  .shop__tel
-    0798-34-6176
-  .shop__image
-    .shop__image__left
-      -# = image_tag("eat2.jpg", class: "image")
-    .shop__image__right
-      -# = image_tag("eat.png", class: "image")
-  %ul.shop__menutab
-    %li.tab
-      = link_to 'ご案内', "#"
-    %li.tab
-      = link_to 'ランチメニュー', "#"
-    %li.tab
-      = link_to '露月のおしながき', "#"
-    %li.tab
-      = link_to '地図', "#"
-    %li.tab
-      = link_to 'お知らせ', notices_path
-  .shop__detail
-    営業カレンダー
-  .shop__detail
-    店舗情報
-  .shop__detail__box
-    .detail__tittle
-      住所
-    .detail
-      兵庫県西宮市津門川町9−6 1F
-    .detail__tittle
-      TEL
-    .detail
-      0798-34-6176
-    .detail__tittle
-      座席
-    %ul.detail
-      %li.detail__list
-        1F : 10席(カウンター4席,テーブル)
-      %li.detail__list
-        2F : 4~12席(1組限定)<br> ※全席禁煙(外に灰皿あり)
-  .shop__detail
-    お知らせ
-    .language__count
-      - @notices.each do |notices|
-        .language__detail__box
-          = link_to (notice_path(notices.id)) do
-            .language__detail__box__day
-              = notices.tittle
-              = notices.content
-  .shop__detail
-    採用情報
+  .top
+    .top__left
+      = link_to '昼はランチ', "#"
+    .top__center
+      .top__center__main
+        %ul.list
+          %li.list__name
+            = link_to 'スタッフ', "#"
+          %li.list__name
+            = link_to '店舗のご案内', "#"
+          %li.list__name
+            = link_to 'お知らせ', "#"
+          %li.list__name
+            = link_to '求人情報', "#"
+        .store
+          -# = image_tag(".jpg", class: "store")
+      .store-image
+        -# = image_tag(".jpg", class: "store-image")
+    .top__right
+      = link_to '夜はバー', "#"
+
+  .staff-page
+    .tittle
+      スタッフ
+    .staff
+      .staff__image
+      .staff__detail
+        %ul.staff__list
+          %li.sub
+            店長
+          %li.staff-name
+            名前
+          %li.sub
+            プロフィール
+        .profile
+          ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+  .store-page
+    .tittle
+      店舗のご案内
+    .store-page__image
+    .store-page__detail
+      .store-name
+        -# = image_tag(".jpg", class: "store-name")
+      .store-access
+        .access
+          〒 000-0000 兵庫県西宮市
+        .tel
+          お電話: 
+          %span.tel-nm 00-0000-0000
+
+  .access-page
+    .access-page__detail
+      .time
+        営業時間
+        %ul
+          %li.time__list
+            ● ランチ (フードL.O.00:00/ドリンクL.O.00:00)
+          %li.time__list
+            ● バー (フードL.O.00:00/ドリンクL.O.00:00)
+          %li.time__list
+            ● 定休日: 月曜日と不定休有り
+      %ul.seat
+        %li.seat-nm
+          席数: 00席
+        %li.seat-nm
+          喫煙: 全席禁煙
+          %span.seat-d 喫煙スペース有り
+        %li.booking
+          = link_to '予約する', "#"
+      .access-method
+        %ul.access-tittle
+          アクセス
+          %li.access-m
+            ・ 阪神「今津駅」から徒歩0分
+            %br・ 阪急「今津駅」から徒歩0分
+    .google
+
+  .notice-page
+    .tittle
+      お知らせ
+    %ul.notice-page__list
+      %li.notice-page__detail
+
+  .recruit-page
+    .tittle
+      求人情報
+  
+  .footer
+    .bottom
+      %ul.list
+        %li.list__name
+          = link_to 'スタッフ', "#"
+        %li.list__name
+          = link_to '店舗のご案内', "#"
+        %li.list__name
+          = link_to 'お知らせ', "#"
+        %li.list__name
+          = link_to '求人情報', "#"
+      .store
+        -# = image_tag(".jpg", class: "store")
+
+
+
+-#   .shop__tittle
+-#     創作和食 いづみ屋
+-#   .shop__tel
+-#     0798-34-6176
+-#   .shop__image
+-#     .shop__image__left
+-#       -# = image_tag("eat2.jpg", class: "image")
+-#     .shop__image__right
+-#       -# = image_tag("eat.png", class: "image")
+-#   %ul.shop__menutab
+-#     %li.tab
+-#       = link_to 'ご案内', "#"
+-#     %li.tab
+-#       = link_to 'ランチメニュー', "#"
+-#     %li.tab
+-#       = link_to '露月のおしながき', "#"
+-#     %li.tab
+-#       = link_to '地図', "#"
+-#     %li.tab
+-#       = link_to 'お知らせ', notices_path
+-#   .shop__detail
+-#     営業カレンダー
+-#   .shop__detail
+-#     店舗情報
+-#   .shop__detail__box
+-#     .detail__tittle
+-#       住所
+-#     .detail
+-#       兵庫県西宮市津門川町9−6 1F
+-#     .detail__tittle
+-#       TEL
+-#     .detail
+-#       0798-34-6176
+-#     .detail__tittle
+-#       座席
+-#     %ul.detail
+-#       %li.detail__list
+-#         1F : 10席(カウンター4席,テーブル)
+-#       %li.detail__list
+-#         2F : 4~12席(1組限定)<br> ※全席禁煙(外に灰皿あり)
+-#   .shop__detail
+-#     お知らせ
+-#     .language
+-#       - @notices.each do |notices|
+-#         .language__detail__box
+-#           = link_to (notice_path(notices.id)) do
+-#             .language__detail__box__day
+-#               = notices.tittle
+-#   .shop__detail
+-#     採用情報
